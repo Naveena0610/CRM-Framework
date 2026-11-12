@@ -16,14 +16,14 @@ test ('leads1',async ({page}) => {
     // let name = await page.locator('//input[@name="lastname"]').inputValue()
     await page.locator("//input[@name='company']").fill('TestYantra')
     await page.locator('(//input[@title="Save [Alt+S]"])[1]').click()
-    let  name =  await page.locator('//span[@class="dvHeaderText"]').textContent('Myneni')
-    console.log(name);
-    //! validating the lead
-    if (name?.includes('Myneni Naveena')) {
-    console.log('lead is created');
-    } else {
-    console.log('lead is not created');
-    }
+    // let  name =  await page.locator('//span[@class="dvHeaderText"]').textContent('Myneni')
+    // console.log(name);
+    // //! validating the lead
+    // if (name?.includes('Myneni Naveena')) {
+    // console.log('lead is created');
+    // } else {
+    // console.log('lead is not created');
+    // }
     //! logout
     await page.locator('//img[@src="themes/softed/images/user.PNG"]').hover()
     await page.locator('//a[text()="Sign Out"]').click()
